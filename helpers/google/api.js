@@ -178,9 +178,18 @@ var serviceMap = {
             enabled: true, isSingleSource: true, InvAsset: 'storage', InvService: 'storage',
             InvResourceCategory: 'storage', InvResourceType: 'bucket', BridgeServiceName: 'buckets',
             BridgePluginCategoryName: 'gcp-Storage', BridgeProvider: 'Google', BridgeCall: 'list',
-            BridgeArnIdentifier: '', BridgeIdTemplate: '', BridgeResourceType: 'b',
-            BridgeResourceNameIdentifier: 'name', BridgeExecutionService: 'gcp-Storage',
+            BridgeArnIdentifier: '', BridgeIdTemplate: '', BridgeResourceType: 'models',
+            BridgeResourceNameIdentifier: 'name', BridgeExecutionService: '',
             BridgeCollectionService: 'gcp-buckets', DataIdentifier: 'data',
+        },
+    'AI & ML':
+        {
+            enabled: true, isSingleSource: true, InvAsset: 'models', InvService: 'vertexAI',
+            InvResourceCategory: 'ai&ml', InvResourceType: 'VertexAI models', BridgeServiceName: 'vertexAI',
+            BridgePluginCategoryName: 'AI & ML', BridgeProvider: 'Google', BridgeCall: 'listDatasets',
+            BridgeArnIdentifier: '', BridgeIdTemplate: '', BridgeResourceType: 'b',
+            BridgeResourceNameIdentifier: 'name', BridgeExecutionService: 'AI & ML',
+            BridgeCollectionService: 'vertexai', DataIdentifier: 'data',
         }
 };
 var calls = {
